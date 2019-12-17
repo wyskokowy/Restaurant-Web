@@ -1,0 +1,59 @@
+.header {
+  height: 100vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("../img/tomato&basil-min.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+
+  &__text {
+    font-family: $primary-font;
+    margin-top: 20rem;
+    text-align: center;
+    text-shadow: 1px 1px 4px #000000;
+
+    @include respond(s) {
+      margin-top: 30rem;
+    }
+
+    &--main {
+      font-size: 25rem;
+      color: $primary-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include respond(s) {
+        font-size: 20rem;
+      }
+
+      &::before,
+      &::after {
+        content: "\00a4";
+        font-size: 2rem;
+        margin: 0 2rem;
+      }
+    }
+
+    &--sub {
+      font-size: 10rem;
+      margin-top: -12rem;
+      color: $secondary-color;
+
+      @include respond(s) {
+        font-size: 8rem;
+        margin-top: -9.6rem;
+      }
+    }
+
+    & span {
+      animation-name: showup;
+      animation-duration: 3s;
+    }
+  }
+}

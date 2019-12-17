@@ -1,0 +1,121 @@
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include transitionEase;
+
+  &__intro {
+    background: $bg-color-light;
+    padding: 6rem 0;
+  }
+
+  &__container {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  &__title {
+    margin-bottom: 4.5rem;
+  }
+
+  &__img {
+    width: 40%;
+    padding: 3rem;
+    margin: 0 10rem;
+
+    @include respond(xl) {
+      padding: 1.5rem;
+    }
+    @include respond(l) {
+      width: 80%;
+      padding: 0.5rem;
+      margin: 0;
+    }
+    @include respond(m) {
+      padding: 2rem;
+    }
+  }
+
+  &__top, &__bottom {
+    padding: 5rem 8rem;
+    display: flex;
+    align-items: center;
+
+    @include respond(m) {
+        flex-direction: column;
+        padding: 3rem 5rem;
+      }
+  }
+  &__top &__img {
+    border: 2rem solid $primary-color;
+
+    @include respond(m) {
+      border: 1rem solid $primary-color;
+    }
+  }
+  &__bottom {
+    flex-direction: row-reverse;
+    background: $bg-color-light;
+    @include respond(m) {
+        flex-direction: column;
+      }
+  }
+  &__bottom &__img {
+    border: 2rem solid $secondary-color;
+
+    @include respond(m) {
+      border: 1rem solid $secondary-color;
+    }
+  }
+  &__text--top,
+  &__text--bottom {
+    width: 30%;
+    font-size: 1.6rem;
+    padding: 4rem;
+    text-align: center;
+    color: $text-color-light;
+    transform: translateY(-5rem);
+
+    @include respond(xl) {
+      font-size: 1.4rem;
+      transform: translateY(-3rem);
+      width: 50%;
+    }
+    @include respond(l) {
+        width: 80%;
+      font-size: 1.6rem;
+      color: $text-color-dark;
+    }
+
+    @include respond(m) {
+      margin-top: 2rem;
+      color: $text-color-light;
+    }
+  }
+  &__text--top {
+    background: $primary-color;
+    margin-left: -20rem;
+
+    @include respond(l) {
+      background: none;
+      margin-left: 0;
+    }
+
+    @include respond(m) {
+      background: $primary-color;
+    }
+  }
+  &__text--bottom {
+    background: $secondary-color;
+    margin-right: -20rem;
+
+    @include respond(l) {
+      background: none;
+      margin-right: 0;
+    }
+
+    @include respond(m) {
+      background: $secondary-color;
+    }
+  }
+}

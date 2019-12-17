@@ -1,0 +1,15 @@
+@keyframes showup {
+    from {
+        transform: rotateY(90deg);
+        opacity: 0;
+    }
+    to {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes headings-anim {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

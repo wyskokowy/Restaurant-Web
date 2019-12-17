@@ -1,0 +1,79 @@
+.book-page {
+  margin: 0 auto;
+  padding: 10rem 0;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__form {
+    width: 100%;
+  }
+  &__title {
+    margin-bottom: 6rem;
+  }
+  &__info {
+    font-size: 2rem;
+    margin-bottom: 6rem;
+    text-align: center;
+    &--red {
+      color: $primary-color;
+    }
+  }
+}
+
+.book__form {
+  &-row {
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $secondary-color;
+
+    @include respond(s) {
+      width: 70%;
+      flex-direction: column;
+    }
+  }
+  &-input {
+    width: 30%;
+    border: 1px solid $secondary-color;
+    color: $secondary-color;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    @include respond(s) {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+  &-input:not(:last-child) {
+    margin-right: 5%;
+
+    @include respond(s) {
+      margin-right: 0;
+    }
+  }
+  &-textarea {
+    padding: 1rem;
+    border: 1px solid $secondary-color;
+    width: 100%;
+    resize: vertical;
+    color: $secondary-color;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.heading__large {
+  font-family: $primary-font;
+  color: $primary-color;
+  font-size: 6rem;
+  text-shadow: $text-shadow-sharp;
+
+  animation-name: showup;
+  animation-duration: 1s;
+}

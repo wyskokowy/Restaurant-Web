@@ -1,0 +1,43 @@
+@import "mixins";
+@import "variables";
+@import "animations";
+@import "navigation";
+@import "footer";
+@import "page-landing";
+@import "section-open";
+@import "section-gallery";
+@import "section-about";
+@import "page-contact";
+@import "page-menu";
+@import "page-book";
+@import "to-top-arrow";
+
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    @include respond(l) {
+        font-size: 56.25%;
+    }
+    @include respond(m) {
+        font-size: 50%;
+    }
+    @include respond(s) {
+        font-size: 43.75%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    font-family: $secondary-font;
+}   
